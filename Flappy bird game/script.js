@@ -65,3 +65,39 @@ function gameLoop() {
 
     requestAnimationFrame(gameLoop);
 }
+
+// Create a new pipe
+function createPipe() {
+    if (!gameActive) return;
+
+    const topHeight = Math.floor(Math.random() * (gameContainer.offsetHeight - 200 - pipeGap)) + 50;
+
+    const pipeTop = document.createElement('div');
+    pipeTop.className = 'pipe';
+    pipeTop.style.height = topHeight + 'px';
+    pipeTop.style.top = '0';
+    pipeTop.style.left = gameContainer.offsetWidth + 'px';
+
+    const pipeBottom = document.createElement('div');
+    pipeBottom.className = 'pipe';
+    pipeBottom.style.height = (gameContainer.offsetHeight - topHeight - pipeGap - 50) + 'px';
+    pipeBottom.style.bottom = '50px';
+    pipeBottom.style.left = gameContainer.offsetWidth + 'px';
+
+    gameContainer.appendChild(pipeTop);
+    gameContainer.appendChild(pipeBottom);
+
+    pipes.push({
+        element: pipeTop,
+        x: gameContainer.offsetWidth,
+        topHeight: topHeight,
+        passed: false
+    });
+
+    pipes.push({
+        element: pipeBottom,
+        x: gameContainer.offsetWidth,
+        topHeight: topHeight,
+        passed: false
+    });
+}
