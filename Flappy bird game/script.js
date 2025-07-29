@@ -140,3 +140,40 @@ function endGame() {
     finalScoreDisplay.textContent = score;
     gameOverDisplay.style.display = 'block';
 }
+
+// Reset game
+function resetGame() {
+    gameActive = false;
+    clearInterval(pipeInterval);
+
+    score = 0;
+    birdY = 300;
+    birdVelocity = 0;
+    pipes = [];
+
+    scoreDisplay.textContent = `Score: ${score}`;
+    bird.style.top = birdY + 'px';
+    gameOverDisplay.style.display = 'none';
+
+    // Clear existing pipes
+    document.querySelectorAll('.pipe').forEach(pipe => pipe.remove());
+}
+
+// Event listeners
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+        e.preventDefault();
+        jump();
+    }
+});
+
+gameContainer.addEventListener('click', jump);
+startBtn.addEventListener('click', startGame);
+resetBtn.addEventListener('click', resetGame);
+playAgainBtn.addEventListener('click', () => {
+    resetGame();
+    startGame();
+});
+
+// Initialize game
+resetGame();
