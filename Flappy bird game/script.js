@@ -101,3 +101,42 @@ function createPipe() {
         passed: false
     });
 }
+
+// Make the bird jump
+function jump() {
+    if (!gameActive) return;
+    birdVelocity = -5.5;
+}
+
+// Start game
+function startGame() {
+    if (gameActive) return;
+
+    gameActive = true;
+    score = 0;
+    birdY = 300;
+    birdVelocity = 0;
+    pipes = [];
+
+    scoreDisplay.textContent = `Score: ${score}`;
+    bird.style.top = birdY + 'px';
+    gameOverDisplay.style.display = 'none';
+
+    // Clear existing pipes
+    document.querySelectorAll('.pipe').forEach(pipe => pipe.remove());
+
+    // Start game loop
+    gameLoop();
+
+    // Start generating pipes
+    pipeInterval = setInterval(createPipe, pipeFrequency);
+}
+
+// End game
+function endGame() {
+    gameActive = false;
+    clearInterval(pipeInterval);
+
+    finalScoreDisplay.textContent = score;
+    gameOverDisplay.style.display = 'block';
+}
