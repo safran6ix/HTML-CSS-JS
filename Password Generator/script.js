@@ -3,7 +3,7 @@ var password = document.getElementById("password");
 //Generate password function
 function genPassword() {
     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var passLenght = 15;
+    var passLenght = 8;
     var password = " ";
     for (var i = 0; i < passLenght; i++) {
         var randomNumber = Math.floor(Math.random() * chars.length);
