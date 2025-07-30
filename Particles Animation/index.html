@@ -51,6 +51,30 @@
             }
         }
 
+        // Create particles
+        const particles = [];
+        const particleCount = Math.floor(canvas.width * canvas.height / 10000);
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Update and draw particles
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+
+            // Connect particles that are close to each other
+            connectParticles();
+
+            requestAnimationFrame(animate);
+        }
+
 
 
     });
