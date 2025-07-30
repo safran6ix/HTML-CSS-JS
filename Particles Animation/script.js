@@ -1,1 +1,7 @@
-const 
+
+
+
+//THE SCRIPT IN HTML FILE SO CHECKOUT...!
+
+
+

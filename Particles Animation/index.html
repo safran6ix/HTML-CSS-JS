@@ -10,5 +10,15 @@
 
     <canvas id="particle-canvas"></canvas>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas to full window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
 </body>
 </html>
