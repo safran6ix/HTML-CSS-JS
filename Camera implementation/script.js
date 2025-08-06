@@ -38,3 +38,27 @@ stopButton.addEventListener('click', () => {
         captureButton.disabled = true;
     }
 });
+
+
+// Capture photo
+captureButton.addEventListener('click', () => {
+    if (!stream) return;
+
+    const context = canvas.getContext('2d');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const imageDataUrl = canvas.toDataURL('image/png');
+
+    // Create and display thumbnail
+    const img = document.createElement('img');
+    img.src = imageDataUrl;
+    photosContainer.appendChild(img);
+
+    // You could also download the image or send it to a server here
+});
+
+// Initialize button states
+stopButton.disabled = true;
+captureButton.disabled = true;
