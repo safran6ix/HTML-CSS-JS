@@ -25,3 +25,16 @@ startButton.addEventListener('click', async () => {
         alert("Could not access the camera. Please ensure you've granted permission.");
     }
 });
+
+// Stop camera
+stopButton.addEventListener('click', () => {
+    if (stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+        video.srcObject = null;
+
+        startButton.disabled = false;
+        stopButton.disabled = true;
+        captureButton.disabled = true;
+    }
+});
