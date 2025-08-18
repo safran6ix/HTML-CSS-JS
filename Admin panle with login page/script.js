@@ -31,3 +31,15 @@ const loginError = document.getElementById("login-error");
 const refresh = document.getElementById("refresh");
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
+
+
+// Login function
+function login(username, password) {
+    if (users[username] && users[username].password === password) {
+        currentUser = users[username];
+        updateUserDetails();
+        showdashboardscreen();
+    } else {
+        loginError.classList.remove("hidden");
+    }
+}
