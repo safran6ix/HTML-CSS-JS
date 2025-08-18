@@ -43,3 +43,36 @@ function login(username, password) {
         loginError.classList.remove("hidden");
     }
 }
+
+// Update user details on dashboard screen
+function updateUserDetails() {
+    userNameElement.textContent = currentUser.name;
+    accountNumberElement.textContent = currentUser.accountNumber;
+    balanceElement.textContent = currentUser.balance;
+    addressElement.textContent = currentUser.address;
+}
+
+// Show dashboard screen after login
+function showdashboardscreen() {
+    loginScreen.classList.add("hidden");
+    dashboardscreen.classList.remove("hidden");
+}
+
+// Logout function
+function logout() {
+    currentUser = null;
+    loginScreen.classList.remove("hidden");
+    dashboardscreen.classList.add("hidden");
+    passwordInput.style.display = "none";
+    loginBtn.style.display = "none";
+    refresh.style.display = "block";
+}
+
+// Event Listeners
+loginBtn.addEventListener("click", () => {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+    login(username, password);
+});
+
+logoutBtn.addEventListener("click", logout);
