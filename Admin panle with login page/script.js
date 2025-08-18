@@ -17,3 +17,17 @@ const users = {
         address: "Empty"
     }
 };
+
+let currentUser = null;
+const balanceElement = document.getElementById("balance");
+const userNameElement = document.getElementById("user-name");
+const accountNumberElement = document.getElementById("account-number");
+const addressElement = document.getElementById("address");
+const loginScreen = document.getElementById("login-screen");
+const dashboardscreen = document.getElementById("dashboard-screen");
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const loginError = document.getElementById("login-error");
+const refresh = document.getElementById("refresh");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
