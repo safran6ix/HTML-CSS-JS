@@ -84,10 +84,11 @@ button:hover {
     position: absolute;
     width: 300px;
     height: 200px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: linear-gradient(135deg, rgb(76, 242, 251), rgb(124, 251, 124));
     padding: 50px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 #login-screen h2 {
