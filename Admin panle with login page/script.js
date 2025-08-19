@@ -14,6 +14,8 @@ const refresh = document.getElementById("refresh");
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 
+const viewcontainer = document.querySelector(".view-container");
+
 
 // Login function
 function login(username, password) {
@@ -58,3 +60,12 @@ loginBtn.addEventListener("click", () => {
 });
 
 logoutBtn.addEventListener("click", logout);
+
+
+//view-container
+function onclick(){
+    viewcontainer.style.display = "block";
+}
+function offclick(){
+    viewcontainer.style.display = "none";
+}
