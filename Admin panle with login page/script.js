@@ -63,9 +63,9 @@ logoutBtn.addEventListener("click", logout);
 
 
 //view-container
-function onclick(){
+function show(){
     viewcontainer.style.display = "block";
 }
-function offclick(){
+function noneshow(){
     viewcontainer.style.display = "none";
 }
