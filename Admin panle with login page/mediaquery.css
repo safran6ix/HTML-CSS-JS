@@ -1,0 +1,22 @@
+/*Media Query*/
+@media screen and (max-width:550px) {
+    * {
+        transition: 400ms;
+    }
+    
+    .admin-container{
+        width: 80%;
+    }
+
+    #login-screen{
+        width: 80%;
+    }
+    
+    #dashboard-screen{
+        width: 60%;
+    }
+
+    .view-container{
+        width: 90%;
+    }
+}
