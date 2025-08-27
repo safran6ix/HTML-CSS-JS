@@ -1,0 +1,88 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #65f6ea, #fec2b2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.book {
+    width: 200px;
+    height: 270px;
+    perspective: 2000px;
+    position: relative;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d00000;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.front {
+    background: #fff;
+}
+
+.back {
+    background: #f0f0f0;
+    transform: rotateY(180deg);
+}
+
+.page.flipped {
+    transform: rotateY(-180deg);
+    z-index: 0;
+}
+
+.page:nth-child(1) {
+    z-index: 4;
+}
+
+.page:nth-child(2) {
+    z-index: 3;
+}
+
+.page:nth-child(3) {
+    z-index: 2;
+}
+
+.page:nth-child(4) {
+    z-index: 1;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
