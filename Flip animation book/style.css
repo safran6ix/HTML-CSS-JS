@@ -27,7 +27,7 @@ body {
     transition: transform 1s ease;
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 2px solid #d00000;
+    /* border: 2px solid #d00000; */
 }
 
 .front,
