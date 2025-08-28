@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel with login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+</head>
+<body>
+    
+<div class="admin-container">
+    <!-- <h1>Admin Panel</h1> -->
+
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+        <button class="btn" id="login-btn">Login</button>
+        <p id="login-error" class="error hidden">Invalid username or password.</p>
+        <p id="refresh">Refresh the page...</p>
+    </div>
+
+    <!-- Dashboard Screen (after login) -->
+    <div id="dashboard-screen" class="hidden">
+        <div class="user-details">
+            <p>Welcome, <br> <span id="user-name"></span></p>
+            <p>Account: <span id="account-number"></span></p>
+            <p>Balance: $<span id="balance"></span></p>
+            <p>Address: <span id="address"></span></p>
+        </div>
+        <div class="dashboard-options">
+            <button class="btn" id="logout-btn">Logout</button>
+        </div>
+        <button class="main-btn" onclick="show()">View</button>
+    </div>
+</div>
+
+<div class="view-container">
+    <button class="view-close-btn" onclick="noneshow()">X</button>
+
+    <p>Welcome,</p>
+    
+    <h2>Username.</h2>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae autem sapiente debitis totam dolores consequuntur ipsum harum incidunt ad? Accusamus esse distinctio maiores porro odit facere perferendis explicabo natus.</h4>
+</div>
+
+<script src="script.js"></script>
+<script src="usersdataset.js"></script>
+</body>
+</html>
