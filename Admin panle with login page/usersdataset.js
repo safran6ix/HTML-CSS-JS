@@ -15,5 +15,13 @@ const users = {
         accountNumber: "987-654-321",
         balance: 2000,
         address: "Empty"
+    },
+    "user3":{
+        username: "user3",
+        password: "12345678",
+        name: "Darren",
+        accountNumber: "987-654-321",
+        balance: 2000,
+        address: "Empty"
     }
 };
