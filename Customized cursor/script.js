@@ -30,3 +30,22 @@
 
     updateCursor();
 
+document.addEventListener('mousedown', () => {
+    cursorDot.classList.add('click');
+    cursorCircle.classList.add('expand');
+});
+
+document.addEventListener('mouseup', () => {
+    cursorDot.classList.remove('click');
+    cursorCircle.classList.remove('expand');
+});
+
+document.addEventListener('mouseleave', () => {
+    cursorDot.style.opacity = '0';
+    cursorCircle.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+    cursorDot.style.opacity = '1';
+    cursorCircle.style.opacity = '1';
+});
