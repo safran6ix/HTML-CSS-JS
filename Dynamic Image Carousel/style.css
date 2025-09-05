@@ -1,0 +1,161 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #2c2c2c 0%, #000000 100%);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     color: #fff;
+ }
+
+ .container {
+     max-width: 900px;
+     width: 100%;
+     text-align: center;
+ }
+
+ h1 {
+     margin-bottom: 30px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+     font-size: 2.5rem;
+ }
+
+ .carousel-container {
+     position: relative;
+     width: 100%;
+     max-width: 800px;
+     margin: 0 auto;
+     overflow: hidden;
+     border-radius: 15px;
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+ }
+
+ .carousel {
+     display: flex;
+     transition: transform 0.5s ease-in-out;
+     height: 450px;
+ }
+
+ .carousel-item {
+     min-width: 100%;
+     height: 100%;
+     position: relative;
+ }
+
+ .carousel-item img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+ }
+
+ .carousel-caption {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.6);
+     color: white;
+     padding: 15px;
+     text-align: center;
+ }
+
+ .carousel-controls {
+     position: absolute;
+     top: 50%;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     transform: translateY(-50%);
+     z-index: 10;
+ }
+
+ .carousel-control {
+     background: rgba(255, 255, 255, 0.7);
+     border: none;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     font-size: 1.5rem;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     margin: 0 15px;
+ }
+
+ .carousel-control:hover {
+     background: rgba(255, 255, 255, 0.9);
+ }
+
+ .carousel-indicators {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+     gap: 10px;
+ }
+
+ .indicator {
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.5);
+     cursor: pointer;
+     transition: background 0.3s ease;
+ }
+
+ .indicator.active {
+     background: white;
+     transform: scale(1.2);
+ }
+
+ .autoplay-control {
+     margin-top: 20px;
+ }
+
+ .autoplay-btn {
+     background: rgba(255, 255, 255, 0.2);
+     border: 2px solid white;
+     color: white;
+     padding: 10px 20px;
+     border-radius: 30px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: all 0.3s ease;
+ }
+
+ .autoplay-btn:hover {
+     background: rgba(255, 255, 255, 0.3);
+ }
+
+ @media (max-width: 768px) {
+     .carousel {
+         height: 350px;
+     }
+
+     h1 {
+         font-size: 2rem;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .carousel {
+         height: 250px;
+     }
+
+     .carousel-control {
+         width: 40px;
+         height: 40px;
+         margin: 0 8px;
+     }
+
+     h1 {
+         font-size: 1.7rem;
+     }
+ }
