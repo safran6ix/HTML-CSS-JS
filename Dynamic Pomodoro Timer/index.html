@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Pomodoro Timer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   
     <div class="card">
         <div class="clock-wrap">
             <div class="ring" id="ring">
@@ -15,16 +16,16 @@
                     <div class="time" id="time">25:00</div>
                     <div class="label" id="sessionLabel">Work</div>
                 </div>
-            </div> 
-            
+            </div>
+
             <div class="controls">
                 <button id="startBtn" class="primary">Start</button>
                 <button id="pauseBtn" class="ghost">Pause</button>
-                <button id="resteBtn" class="ghost">Reset</button>
+                <button id="resetBtn" class="ghost">Reset</button>
                 <button id="skipBtn" class="ghost">Skip</button>
             </div>
-            
-            <div class="cycles" style="margin-top: 8px;">
+
+            <div class="cycles" style="margin-top:8px">
                 <div class="hint">Cycles completed:</div>
                 <div id="cycleCount">0</div>
             </div>
@@ -36,22 +37,18 @@
                     <label>Work (minutes)</label>
                     <input type="number" id="workMin" min="1" value="25" />
                 </div>
-
                 <div class="row">
                     <label>Short Break (minutes)</label>
-                    <input type="number" id="shortMin" min="1" value="5"/>
+                    <input type="number" id="shortMin" min="1" value="5" />
                 </div>
-
                 <div class="row">
                     <label>Long Break (minutes)</label>
-                    <input type="number" id="longMin" min="1" value="15"/>
+                    <input type="number" id="longMin" min="1" value="15" />
                 </div>
-
                 <div class="row">
                     <label>Long break every</label>
-                    <input type="number" id="cyclesBeforeLong" min="1" value="4">
+                    <input type="number" id="cyclesBeforeLong" min="1" value="4" />
                 </div>
-
                 <div class="row">
                     <label>Auto-start next</label>
                     <select id="autoMode">
@@ -59,7 +56,6 @@
                         <option value="true">On</option>
                     </select>
                 </div>
-
                 <div class="row">
                     <label>Sound</label>
                     <select id="soundMode">
@@ -67,7 +63,6 @@
                         <option value="none">None</option>
                     </select>
                 </div>
-
                 <div class="row">
                     <label>Notifications</label>
                     <select id="notifyMode">
@@ -75,7 +70,6 @@
                         <option value="true">On</option>
                     </select>
                 </div>
-
                 <div style="display:flex;gap:8px;padding-top:8px">
                     <button id="saveBtn" class="ghost">Save</button>
                     <button id="restoreBtn" class="ghost">Restore defaults</button>
@@ -89,19 +83,18 @@
                     <button id="presetShort" class="ghost">Short Work (15/3)</button>
                     <button id="presetLong" class="ghost">Deep Work (50/10)</button>
                 </div>
-            
+
                 <div style="margin-top:12px">
                     <div class="hint">Tip: change durations and press Save to store between visits.</div>
                 </div>
             </div>
+
         </div>
 
-
         <footer>Pomodoro Timer — single file. Customize durations, auto-start, and notifications.</footer>
-
     </div>
-
 
     <script src="script.js"></script>
 </body>
+
 </html>
