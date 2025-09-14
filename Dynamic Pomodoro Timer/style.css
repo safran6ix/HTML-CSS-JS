@@ -107,3 +107,92 @@ button.ghost{
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.04);
 }
+
+.settings {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.015));
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6px
+}
+
+.row label {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+input[type=number] {
+    width: 74px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit
+}
+
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.preset {
+    display: flex;
+    gap: 10px
+}
+
+.preset button {
+    flex: 1
+}
+
+.cycles {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.hint {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+footer {
+    grid-column: 1/-1;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px
+}
+
+@media (max-width:880px) {
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 420px
+    }
+    .ring {
+        width: 260px;
+        height: 260px
+    }
+    .inner {
+        width: 78%;
+        height: 78%
+    }
+}
