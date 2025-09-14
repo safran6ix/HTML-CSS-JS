@@ -185,7 +185,8 @@
         @media (max-width:880px) {
             .card {
                 grid-template-columns: 1fr;
-                max-width: 420px
+                max-width: 420px;
+                max-height: 400px;
             }
 
             .ring {
