@@ -30,7 +30,74 @@
             </div>
         </div>
 
-        
+        <div class="right-column">
+            <div class="settings">
+                <div class="row">
+                    <label>Work (minutes)</label>
+                    <input type="number" id="workMin" min="1" value="25" />
+                </div>
+
+                <div class="row">
+                    <label>Short Break (minutes)</label>
+                    <input type="number" id="shortMin" min="1" value="5"/>
+                </div>
+
+                <div class="row">
+                    <label>Long Break (minutes)</label>
+                    <input type="number" id="longMin" min="1" value="15"/>
+                </div>
+
+                <div class="row">
+                    <label>Long break every</label>
+                    <input type="number" id="cyclesBeforeLong" min="1" value="4">
+                </div>
+
+                <div class="row">
+                    <label>Auto-start next</label>
+                    <select id="autoMode">
+                        <option value="false">Off</option>
+                        <option value="true">On</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Sound</label>
+                    <select id="soundMode">
+                        <option value="beep">Beep</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Notifications</label>
+                    <select id="notifyMode">
+                        <option value="false">Off</option>
+                        <option value="true">On</option>
+                    </select>
+                </div>
+
+                <div style="display:flex;gap:8px;padding-top:8px">
+                    <button id="saveBtn" class="ghost">Save</button>
+                    <button id="restoreBtn" class="ghost">Restore defaults</button>
+                </div>
+            </div>
+
+            <div
+                style="padding:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));border-radius:12px">
+                <div class="preset">
+                    <button id="presetPom" class="ghost">Pomodoro (25/5)</button>
+                    <button id="presetShort" class="ghost">Short Work (15/3)</button>
+                    <button id="presetLong" class="ghost">Deep Work (50/10)</button>
+                </div>
+            
+                <div style="margin-top:12px">
+                    <div class="hint">Tip: change durations and press Save to store between visits.</div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>Pomodoro Timer — single file. Customize durations, auto-start, and notifications.</footer>
 
     </div>
 
