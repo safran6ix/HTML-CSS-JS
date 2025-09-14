@@ -22,3 +22,18 @@ const restoreBtn = $('restoreBtn');
 
 const presets = { pom: [25, 5, 15, 4], short: [15, 3, 10, 4], deep: [50, 10, 20, 4] };
 
+//Defualt  state
+let state = {
+    mode: 'work', // 'work' | 'short' | 'long'
+    running: false,
+    remaining: 25 * 60,
+    workMin: 25,
+    shortMin: 5,
+    longMin: 15,
+    cyclesBeforeLong: 4,
+    cyclesCompleted: 0,
+    autoStart: false,
+    sound: 'beep',
+    notify: false,
+    intervalId: null,
+};
