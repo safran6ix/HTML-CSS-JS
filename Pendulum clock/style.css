@@ -1,0 +1,163 @@
+:root {
+    --bg: #111214;
+    --case: #2e2e2e;
+    --case-border: #444;
+    --face: #fff7ec;
+    --hand-hour: #2b2b2b;
+    --hand-minute: #2b2b2b;
+    --hand-second: #e11d48;
+    --rod: #9aa0a6;
+    --bob1: #bdbdbd;
+    --bob2: #555;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #0e1114 0%, #111214 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: scale(0.86);
+}
+
+.clock {
+    position: relative;
+    width: 260px;
+    height: 380px;
+    background: var(--case);
+    border: 6px solid var(--case-border);
+    border-radius: 18px;
+    box-shadow: inset 0 6px 30px rgba(0, 0, 0, 0, 0.6), 0 14px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+    box-sizing: border-box;
+}
+
+.face {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 25%, #fff, #f7efdf 40%,
+            var(--face) 100%);
+    border: 6px solid #e6d8bf;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+
+.tick {
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background: #7a6f5a;
+    top: 70px;
+    left: 49%;
+    transform-origin: 50% 5px;
+    border-radius: 2px;
+    opacity: 0.95;
+}
+
+.hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.hand.hour {
+    width: 8px;
+    height: 30%;
+    background: linear-gradient(#222, var(--hand-hour));
+    z-index: 7;
+}
+
+.hand.minute {
+    width: 6px;
+    height: 40%;
+    background: linear-gradient(#222, var(--hand-minute));
+    z-index: 8;
+}
+
+.hand.second {
+    width: 3px;
+    height: 45%;
+    background: linear-gradient(var(--hand-second), #ff8aa1);
+    z-index: 9;
+}
+
+.hand.hour::after,
+.hand.minute::after,
+.hand.second::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 12px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0, 0.12);
+}
+
+.center-cap {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff, #ddd);
+    border: 2px solid #222;
+    z-index: 10;
+}
+
+.pendulum {
+    width: 6px;
+    height: 130px;
+    background: linear-gradient(#c9ced4, var(--rod));
+    margin-top: -10px;
+    transform-origin: top center;
+    border-radius: 4px;
+    position: relative;
+    z-index: 4;
+    animation: swing 2s ease-in-out infinite;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.bob {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, var(--bob1), var(--bob2));
+    box-shadow:
+        inset -8px -8px 18px rgba(0, 0, 0, 0, 0.35),
+        inset 6px 6px 10px rgba(255, 255, 255, 0.06);
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(-25deg);
+    }
+}
