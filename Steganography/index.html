@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Steganography!?</h1>
+            <p class="subtitle">Hide and extract secret messages within images</p>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="encode">Encode Message</div>
+            <div class="tab" data-tab="decode">Decode Message</div>
+        </div>
+
+        <!-- Encode Tab -->
+        <div class="tab-content active" id="encode-tab">
+            <div class="upload-area" id="encode-upload">
+                <i>📁</i>
+                <h3>Upload Image to Encode</h3>
+                <p>Click here or drag and drop an image file</p>
+                <p class="small">Supported formats: JPG, PNG, GIF</p>
+                <input type="file" id="encode-file" accept="image/*" class="hidden">
+            </div>
+
+            <div id="encode-preview" class="hidden">
+                <div class="preview-container">
+                    <div class="preview-box">
+                        <h3>Original Image</h3>
+                        <img id="original-image" class="preview-image" src="" alt="Original Image">
+                    </div>
+                    <div class="preview-box">
+                        <h3>Encoded Image</h3>
+                        <img id="encoded-image" class="preview-image" src="" alt="Encoded Image">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="secret-message">
+                        <h3>Secret Message:</h3>
+                    </label>
+                    <textarea id="secret-message" placeholder="Enter your secret message here..."></textarea>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="encode-btn" class="btn">Encode Message</button>
+                    <button id="download-encoded" class="btn" disabled>Download Encoded Image</button>
+                </div>
+            </div>
+
+            <div id="encode-message" class="message"></div>
+        </div>
+
+        
+
+        <footer>
+            <p>Steganography!? &copy; 2025, @Codify6ix</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
