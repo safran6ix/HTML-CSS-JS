@@ -59,7 +59,38 @@
             <div id="encode-message" class="message"></div>
         </div>
 
+        <!-- Decode Tab -->
+        <div class="tab-content" id="decode-tab">
+            <div class="upload-area" id="decode-upload">
+                <i>📁</i>
+                <h3>Upload Image to Decode</h3>
+                <p>Click here or drag and drop an encoded image file</p>
+                <p class="small">Supported formats: JPG, PNG, GIF</p>
+                <input type="file" id="decode-file" accept="image/*" class="hidden">
+            </div>
         
+            <div id="decode-preview" class="hidden">
+                <div class="preview-container">
+                    <div class="preview-box">
+                        <h3>Encoded Image</h3>
+                        <img id="encoded-image-preview" class="preview-image" src="" alt="Encoded Image">
+                    </div>
+                </div>
+        
+                <div class="action-buttons">
+                    <button id="decode-btn" class="btn">Decode Message</button>
+                </div>
+        
+                <div>
+                    <label for="decoded-message">
+                        <h3>Decoded Message:</h3>
+                    </label>
+                    <textarea id="decoded-message" readonly placeholder="The decoded message will appear here..."></textarea>
+                </div>
+            </div>
+        
+            <div id="decode-message" class="message"></div>
+        </div>
 
         <footer>
             <p>Steganography!? &copy; 2025, @Codify6ix</p>
