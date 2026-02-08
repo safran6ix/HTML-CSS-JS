@@ -1,0 +1,14 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: radial-gradient(circle at center, #020111, #000);
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    canvas {
+        display: block;
+    }
